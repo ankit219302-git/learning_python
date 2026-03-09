@@ -41,11 +41,11 @@ Hello, PyCharm
 🥊 Case 2 — File Is Imported
 
 Example:
-from hello_world.hello import print_hello
+from hello import print_hello
 print_hello("World")
 
 Now Python sets:
-__name__ = "hello_world.hello"
+__name__ = "hello"
 
 So this condition becomes false:
 if "main" == "__main__"
@@ -62,7 +62,7 @@ print_hello("PyCharm")
 Then this code 'print_hello("PyCharm")' runs every time the file is imported.
 
 Example:
-from hello_world.hello import print_hello
+from hello import print_hello
 print_hello("World")
 
 Output:
@@ -73,4 +73,3 @@ Hello, World
 if __name__ == '__main__':
     print_hello('PyCharm')
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/

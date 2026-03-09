@@ -22,6 +22,8 @@ def load(dictionary):
         exit()
 
 def check(word):
+    if size() == 0:
+        raise Exception("The dictionary is empty!!")
     return word.lower() in words
 
 def size():
