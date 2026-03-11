@@ -4,6 +4,7 @@ from dotenv import load_dotenv, find_dotenv
 
 load_dotenv()
 # Only for testing. Not needed when the actual path is in .env or system environment variables
+# override=True is for overriding already loaded env variables
 load_dotenv(find_dotenv(".env.test"), override=True)
 words = set()
 default_dictionary_path = os.getenv("DICTIONARY_PATH")
