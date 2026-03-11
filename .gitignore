@@ -13,4 +13,4 @@ __pycache__/
 
 # Log files
 *.log
-/.env.test
+/spell-checker/.env.test
