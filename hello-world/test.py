@@ -1,3 +1,4 @@
 from hello import print_hello
 
-print_hello("World")
+name = input("Enter your name: ")
+print_hello(name)
