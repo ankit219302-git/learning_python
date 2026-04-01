@@ -7,20 +7,20 @@ import datetime
     Example:
     f"{value:*>+10.2f}"
 
-    1.  * is the custom fill character to pad the value with. If no value is provided, space is used as default padding.
-    2.  > is the alignment to be done
+    1.  '*' is the custom fill character to pad the value with. If no value is provided, space is used as default padding.
+    2.  '>' is the alignment to be done
             <	Left align (like string.ljust() - left justified)
             >	Right align	(like string.rjust() - right justified)
             ^	Center align (like string.center())
-    3.  + is the sign behaviour to be adopted
+    3.  '+' is the sign behaviour to be adopted
             +	Always show sign
             -	Only show negative sign (default)
             space	Show space for positive numbers
-    4.  10 is the minimum field width that the value need to occupy including the padded fill, sign and precision.
+    4.  '10' is the minimum field width that the value need to occupy including the padded fill, sign and precision.
         If the specified width is less than the actual value that needs to be displayed, 
         then the value is displayed completely, even if it exceeds the specified width.
-    5.  .2 is the precision - the number of decimal places to be used
-    6.  type in which the value is to be depicted
+    5.  '.2' is the precision - the number of decimal places to be used
+    6.  'f' is the type (float in this case) in which the value is to be depicted
             f	Float
             d	Integer
             b	Binary
