@@ -25,8 +25,18 @@ Option 2: Catching the exception and printing unwanted case message in except bl
 
 Option 3: Catching the exception and printing desired case message in else
 '''
+
+
+def print_hash(hash_count):
+    if hash_count > 0:
+        print("#" * hash_count)     # This prints '#' hash_count times
+    else:
+        print("Cannot print '#'", hash_count, "times")
+
+
 try:
     n = int(input("Enter an integer: "))
+    print_hash(n)
 except ValueError as ve:
     print("Not an integer")
     print("---------------Input Error Details---------------\n", ve)
