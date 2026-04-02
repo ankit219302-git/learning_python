@@ -10,7 +10,7 @@ python exit.py Ankit
 Below code will exit with status 0, since the length of argv will now be 2
 While running -
 
-To check last command exit status, run command - 
+To check last command's exit status, run command - 
 'echo $?'
 '''
 if len(sys.argv) != 2:
