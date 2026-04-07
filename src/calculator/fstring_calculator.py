@@ -52,7 +52,7 @@ else:
 
 print()
 newline_unicode = f"Newline unicode: {ord('\n')}"
-print(f"---Newline: {'\n'}---")
+print(f"---Newline{'\n'}---")
 print(newline_unicode)
 # Date fstring formatting
 today = datetime.datetime.today()
