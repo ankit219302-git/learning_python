@@ -33,10 +33,9 @@ def print_file_contents(file_path):
     except FileNotFoundError:
         print("File not found!!")
 
-
-choice = input("Do you want to write to file (y/n): ")
-
-if choice.lower() == "y":
-    write_file("resources/phonebook.csv")
-else:
-    print_file_contents("resources/phonebook.csv")
+if __name__ == "__main__":
+    choice = input("Do you want to write to file (y/n): ")
+    if choice.lower() == "y":
+        write_file("resources/phonebook.csv")
+    else:
+        print_file_contents("resources/phonebook.csv")
