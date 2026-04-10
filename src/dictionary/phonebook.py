@@ -31,7 +31,12 @@ Option 2 for searching phone book numbers
 print("!! Option 2 !!")
 
 input_name = input("Enter name to search in phonebook: ")
-if input_name.lower() in {record["name"].lower() for record in phonebook}:
+'''
+[record["name"].lower() for record in phonebook] is an example of list comprehension.
+It is a concise, single-line syntax in Python used to create new lists from existing iterables (like lists, strings, or ranges). 
+It serves as a readable and often faster alternative to traditional loops.
+'''
+if input_name.lower() in [record["name"].lower() for record in phonebook]:
     # Here number can't be printed without looping because we don't have access to record variable
     print(f"{input_name} FOUND in phonebook")
 else:

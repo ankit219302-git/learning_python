@@ -13,10 +13,10 @@ print()
 
 print()
 print("--------------Code info for write_file() function in 'src.csv.phonebook'--------------\n")
-print(dis.code_info(write_file))
+print(dis.code_info(write_file))        # code_info() function in dis module lets us see the code info.
 print()
 
 print()
 print("--------------Bytecode for entire 'src.csv.phonebook' module--------------\n")
-dis.dis(phonebook)     # dis() function in dis module lets us see the bytecode instructions that Python generates from code.
+dis.dis(phonebook)      # dis() function in dis module lets us see the bytecode instructions that Python generates from code.
 print("\n-------------------------------------------------------------------------------------")
