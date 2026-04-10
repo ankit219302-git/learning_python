@@ -2,7 +2,7 @@ import datetime
 
 '''
 ---- Python f-String Format Cheat Sheet ----
-    {value:[fill][align][sign][width][.precision][type]}
+    f"{value:[fill][align][sign][#][0][width][grouping][.precision][type]}"
 
     Example:
     f"{value:*>+10.2f}"
@@ -38,20 +38,24 @@ operation = input("Operation [+,-,/,x,%(modulus)]: ")
 # Similarly, if :.0f is used it will forcefully remove any decimal representation even when dealing with float values
 if operation == "+":
     print(f"The sum is: {(x + y):.13f}")        # This forces the output to print as a floating point number till 13 decimal places
+    print(f"The addition is: {(x + y):#b}")     # This (#) adds prefixes for binary, hex, etc. values (e.g. 1101 binary will be printed as 0b1101)
+    print(f"The addition is: {x + y:b}")        # This (without #) will simply print binary value
 elif operation == "-":
     diff = x - y
     print(f"The difference is: <{diff:/^ 12.1f}>")      # Display '12' width diff as a 'float' type, padded with '/', having precision '1', and sign as 'space' for positive numbers
 elif operation == "/":
     print(f"The division quotient is: {(x / y):.19f}")      # Forced floating point number printing till 19 decimal places
 elif operation == "x":
-    print(f"The product is: {x * y}")
+    print(f"The product is: {(x * y):,}")       # Adds thousands separator (commas) to the number
+    print(f"The multiplication is: {x * y = }")     # Debug formatter - prints 'x * y = ' before printing the value
 elif operation == "%":
-    print("The modulus is:", x % y)
+    print(f"The modulus is: {(x % y):e}")       # Prints in scientific notation
+    print(f"The remainder is: {(x % y):015}")       # Pads 0s at the beginning (total length 15 including the value)
 else:
     print("Invalid operation")
 
 print()
-newline_unicode = f"Newline unicode: {ord('\n')}"
+newline_unicode = f"Newline unicode code point: {ord('\n')}"
 print(f"---Newline{'\n'}---")
 print(newline_unicode)
 # Date fstring formatting
