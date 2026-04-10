@@ -1,4 +1,5 @@
 import dis
+import time
 
 '''
 Because Python VM is stack-based, 
@@ -40,6 +41,7 @@ if __name__ == "__main__":
             else f"Increment of {inc_num} = {increment2(inc_num)}" if inc_choice == 2
             else "Invalid choice!!"
         )
+        time.sleep(2)       # Holds the main execution thread for 2 seconds
 
     print()
     print("--------------Bytecode for square1() function--------------\n")
