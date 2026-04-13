@@ -97,7 +97,7 @@ if __name__ == '__main__':
 
     print("\n---------String Optimizations---------")
     print("Compile time concatenation : ")
-    str5 = "Hello ""World"      # Python will optimize this and concatenate the string during compilation
+    str5 = "Hello ""World"      # OR "Hello " + "World", Python will optimize this and concatenate the string during compilation
     str6 = "Hello World"
     print(str5 is str6)     # True since str6 will point to the same address post compilation
 
