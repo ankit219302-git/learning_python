@@ -86,6 +86,25 @@ if __name__ == '__main__':
     and reuses it wherever needed.
     Instead of creating multiple identical string objects, Python reuses the same object in memory.
     '''
-    str1 = "Hello World"
+    str1 = "Hello World"        # String literal
     str2 = "Hello World"
-    print(str1 is str2)     # True - Python caches string value and assigns new variables the same memory address if value is same
+    print(str1 is str2)     # True - Python caches string literals and assigns new variables the same memory address if value is same
+
+    str3 = "Hello World"
+    str4 = "".join(["Hello ", "World"])
+    print(str3 == str4)     # True - value is same
+    print(str3 is str4)     # False - Python join() creates new object in memory
+
+    print("\n---------String Optimizations---------")
+    print("Compile time concatenation : ")
+    str5 = "Hello ""World"      # Python will optimize this and concatenate the string during compilation
+    str6 = "Hello World"
+    print(str5 is str6)     # True since str6 will point to the same address post compilation
+
+    print("Runtime concatenation : ")
+    str7 = "Hello World"
+    test1 = "Hello "
+    test2 = "World"
+    str8 = test1 + test2        # Python will concatenate this string during runtime
+    print(str7 == str8)     # True - value is same
+    print(str7 is str8)     # False - runtime concatenation creates new object in memory
