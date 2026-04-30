@@ -48,7 +48,7 @@ class UserService:
 
 Python does not have real access modifiers like Java (private, protected).
 
-Instead it uses conventions + name mangling.
+Instead, it uses conventions + name mangling.
 
 ## 🥊 Private (_variable)
 
@@ -73,7 +73,7 @@ Meaning:
 "This is internal. Please don't use it outside the class."
 
 But Python does not enforce it.
-You can still access it:
+We can still access it:
 
 ```
 service = UserService()
