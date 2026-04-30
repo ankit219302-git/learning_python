@@ -6,7 +6,8 @@
 
 def print_hello(name = "World"):
     # Use a breakpoint in the code line below to debug your script.
-    print(f"Hello, {name.capitalize()}")  # Press ⌘F8 to toggle the breakpoint.
+    # Press ⌘F8 to toggle the breakpoint.
+    print(f"Hello, {name.capitalize()}")
 
 
 # Press the green button in the gutter to run the script.
@@ -54,7 +55,7 @@ Therefore the code inside the block does NOT run.
 Output:
 Hello, World
 
-If you remove the check:
+If we remove the check:
 def print_hello(name):
     print(f"Hello, {name}")
 print_hello("PyCharm")
