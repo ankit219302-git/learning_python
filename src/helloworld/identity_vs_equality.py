@@ -68,6 +68,9 @@ if __name__ == '__main__':
 
     print("\n---------Function pass by reference---------")
     a = [1,2,3]
+    # [:] - This is slice notation that means "from start to end". It tells Python to create a shallow copy of the entire list.
+    add_item(a[:])      # This will NOT print [1, 2, 3, 4] instead just [1, 2, 3], because [:] creates a shallow copy of the list
+    print(a)
     add_item(a)
     print(a)        # Will print [1, 2, 3, 4] because the function receives a reference to the same list.
 
