@@ -1,4 +1,4 @@
-'''
+"""
 Python manages memory automatically using two mechanisms together:
 
 1. Reference counting (primary mechanism)
@@ -17,7 +17,7 @@ if ref_count == 0
 object destroyed
 
 Circular references are cleaned by garbage collector.
-'''
+"""
 import gc
 import sys
 
@@ -75,13 +75,6 @@ if __name__ == "__main__":
 
     print(f"Is GC enabled: {gc.isenabled()}")
     print(f"Current GC count = {gc.get_count()}")
-    # gc.get_count() example output:
-    # (320, 5, 1)
-    #
-    # Meaning:
-    # objects in generation 0
-    # objects in generation 1
-    # objects in generation 2
 
     # gc.collect(generation=2) or simply gc.collect() scans all three generations (0, 1, and 2).
     # Since Generation 2 contains long-lived objects that have survived multiple previous cycles, this is the only way to reclaim memory from them.

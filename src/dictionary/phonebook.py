@@ -88,7 +88,7 @@ if name.lower() in {k.lower(): v for k, v in phonebook_dict.items()}:
 else:
     print(f"{name} NOT FOUND in phonebook")
 
-# If you want to print the number, convert the dict to lowercase and store in a variable
+# If we want to print the number, convert the dict to lowercase and store in a variable
 phonebook_dict_lowercase = {k.lower(): v for k, v in phonebook_dict.items()}
 if name.lower() in phonebook_dict_lowercase:
     print(f"{name} FOUND in phonebook with number {phonebook_dict_lowercase.get(name.lower())}")
