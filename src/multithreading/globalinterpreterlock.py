@@ -21,13 +21,18 @@ def decrement():
         x -= 1
 
 def calculate_time_taken(start_time, env_type):
-    print(f"Total time taken in {env_type} run: {(time.time() - start_time):.10f} seconds")
+    print(f"Total time taken in {env_type} run: {(time.perf_counter() - start_time):.10f} seconds")
 
 if __name__ == '__main__':
     thread1 = Thread(target=increment)
     thread2 = Thread(target=decrement)
 
-    multithreaded_start_time = time.time()
+    # time.perf_counter() is better for benchmarking than time.time().
+    # The primary difference is that time.time() measures absolute "wall-clock" time (what time it is),
+    # while time.perf_counter() is a high-resolution (more precise) timer
+    # designed specifically for measuring durations (how long something took).
+    # More details in wrapperfunctions.py
+    multithreaded_start_time = time.perf_counter()
     thread1.start()
     thread2.start()
     # Here we need the threads to finish execution before proceeding, hence .join() usage.
@@ -60,7 +65,7 @@ if __name__ == '__main__':
     # SAMPLE OUTPUT -->
     # Total time taken in multithreaded run: 2.5519981384 seconds
     # Total time taken in sequential run: 2.5427258015 seconds
-    sequential_start_time = time.time()
+    sequential_start_time = time.perf_counter()
     increment()
     decrement()
     calculate_time_taken(sequential_start_time, env_type="sequential")
